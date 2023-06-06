@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoryLeakExamVC" customModule="SwiftExample" customModuleProvider="target">
+            <connections>
+                <outlet property="labelData" destination="oTB-b2-ZYl" id="uAH-Ia-Nvh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gP5-60-YhT">
+                    <rect key="frame" x="100.33333333333333" y="421" width="192.33333333333337" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Get Data Immediately "/>
+                    <connections>
+                        <action selector="btnGetDataImmediatelyTapped:" destination="-1" eventType="touchUpInside" id="Yh2-8U-0mm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTB-b2-ZYl">
+                    <rect key="frame" x="175.66666666666666" y="89" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOL-rz-rce">
+                    <rect key="frame" x="66.333333333333343" y="473" width="260.66666666666663" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Get Data with long waiting time"/>
+                    <connections>
+                        <action selector="btnGetDataLongWaitingTimeTapped:" destination="-1" eventType="touchUpInside" id="LVY-Ow-502"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iOL-rz-rce" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Elj-mS-M5x"/>
+                <constraint firstItem="iOL-rz-rce" firstAttribute="top" secondItem="gP5-60-YhT" secondAttribute="bottom" constant="17" id="NIs-6r-x6A"/>
+                <constraint firstItem="gP5-60-YhT" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="cES-5N-zZF"/>
+                <constraint firstItem="gP5-60-YhT" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="da4-wj-YaC"/>
+                <constraint firstItem="oTB-b2-ZYl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eJ1-hw-pvw"/>
+                <constraint firstItem="oTB-b2-ZYl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="rk9-2M-iCy"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
